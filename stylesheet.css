@@ -1,0 +1,141 @@
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    background: #d2cf1e;
+    box-shadow: inset 0px -50px 100px 1px #757421;
+    margin-bottom: 2em;
+}
+
+header div {
+    text-align: center;
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+header h1 {
+    position: absolute;
+    top: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+}
+
+header img {
+    width: 80px;
+    padding: 20px 0;
+    margin-left: 500px;
+}
+
+main .inputs {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 2em;
+}
+
+main .inputs label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+main .inputs p {
+    position: absolute;
+    margin-left: 40%;
+    font-size: 0.9em;
+}
+
+main .inputs .botaoAdicionar {
+    margin-left: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2em;
+    padding: 3px 7px;
+    background: yellow;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all;
+    box-shadow: inset 0px 0px 3px 0px;
+}
+
+main .inputs .botaoAdicionar:hover {
+    transform: scale(1.2);
+}
+
+main .inputs .botaoAdicionar:active {
+    transition: 0ms;
+    background: #a3a12b;
+}
+
+table {
+    width: 600px;
+    margin: 0 auto;
+}
+
+table th {
+    width: 200px;
+    padding: 0.3em;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: solid 2px #000000;
+}
+
+table th:last-of-type {
+    width: 100px;
+}
+
+tbody td:last-of-type {
+    width: 100px;
+}
+
+.itemLista {
+    width: 200px;
+    font-size: 1.3em;
+    padding: 6px 0 6px 2em;
+    font-family: 'Oswald', sans-serif;
+    border: solid 2px #000000;
+}
+
+.removeItem {
+    border: none;
+    border-radius: 5px;
+    background: red;
+    color: white;
+    font-size: 1.1em;
+    transition: 0.2s;
+    margin-left: -9px;
+    margin-right: 10px;
+    padding: 2px 7px;
+}
+
+.removeItem:hover {
+    box-shadow: 0 0 10px 2px darkred;
+}
+
+.removeItem:active {
+    transition: 0ms;
+    background:darkred;
+}
+
+.botaoEditar {
+    border: none;
+    display: inline-block;
+    border-radius: 5px;
+    background: green;
+    color: white;
+    font-size: 1.1em;
+    font-family: 'Oswald', sans-serif;
+    transition: 0.2s;
+    padding: 1px 5px;
+}
+
+.botaoEditar:hover {
+    box-shadow: 0 0 10px 2px darkgreen;
+}
+
+.botaoEditar:active {
+    transition: 0ms;
+    background: darkgreen;
+}

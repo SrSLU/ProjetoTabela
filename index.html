@@ -1,0 +1,73 @@
+<!--Coisas importantes do HTML-->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+
+        <!--Referência das sheets de CSS-->
+
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+        <!--Referência dos scripts (preciso melhorar o trabalho com módulos)-->
+
+        <script type="module" src="main.mjs"></script>
+        <script src="assets/removeProduto.js"></script>
+        <script src="assets/editaProduto.js"></script>
+    </head>
+
+<!--//////////////////////////////////////////////////////////////////////-->
+
+    <body>
+
+        <!--Cabeçalho-->
+
+        <header>
+            <div>
+                <h1>Tabela de Produtos dos Camaradas</h1>
+                <img class="imagemCabecalho" src="./arquivos auxiliares/simbolo-cominismo-martelo-foice-3.png">
+            </div>
+        </header>
+
+        <main>
+
+            <!--Barras de inserção das informações dos produtos-->
+
+            <div class="inputs">
+                <label for="nome">Nome do produto:</label>
+                <input class="nomeProduto" id="nome" type="text">
+
+                <label for="valor">Valor do produto:</label>
+                <input class="valorProduto" id="valor" type="number">
+                <p>(O valor receberá o símbolo de "R$" automati-<br>camente, adicione apenas o valor com reais e centavos)</p>
+
+                <label for="quantidade">Quantidade do produto:</label>
+                <input class="quantidadeProduto" id="quantidade" type="number">
+
+                <input type="button" value="Adicionar item" class="botaoAdicionar">
+            </div>
+
+            <!--Tabela-->
+
+            <table class="myTable">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Valor (por KG)</th>
+                        <th>Quantidade (em KGs)</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody class="corpoItensLista">
+                </tbody>
+            </table>
+        </main>
+        
+    </body>
+</html>
