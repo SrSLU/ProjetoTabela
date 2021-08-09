@@ -74,7 +74,8 @@ table {
 }
 
 table th {
-    width: 200px;
+    max-width: 25%;
+    min-width: 25%;
     padding: 0.3em;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5em;
@@ -83,19 +84,28 @@ table th {
 }
 
 table th:last-of-type {
-    width: 100px;
+    max-width: 25%;
+    min-width: 25%;
 }
 
 tbody td:last-of-type {
-    width: 100px;
+    max-width: 25%;
+    min-width: 25%;
 }
 
 .itemLista {
-    width: 200px;
+    max-width: 25%;
+    min-width: 25%;
     font-size: 1.3em;
     padding: 6px 0 6px 2em;
     font-family: 'Oswald', sans-serif;
     border: solid 2px #000000;
+}
+
+.itemLista:last-of-type {
+    max-width: 25%;
+    min-width: 25%;
+    padding-left: 0px;
 }
 
 .removeItem {
@@ -105,8 +115,8 @@ tbody td:last-of-type {
     color: white;
     font-size: 1.1em;
     transition: 0.2s;
-    margin-left: -9px;
-    margin-right: 10px;
+    margin-left: 9px;
+    margin-right: 9px;
     padding: 2px 7px;
 }
 

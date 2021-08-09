@@ -34,10 +34,6 @@ function criaProduto() {
     for(var i = 0; i < arrayProduto.length; i++) {
         arrayProduto[i].value = "";
     }
-
-    arrayEditor.push(idEditor);
-
-    contadorEditor++;
 }
 
 export {criaProduto};
