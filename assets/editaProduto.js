@@ -14,8 +14,7 @@ function editaProduto(evento) {
             column.contentEditable = "true";
             column = column.previousSibling;
         }
-        const paragrafoColumn = column.querySelector("p");
-        paragrafoColumn.focus();
+        
         editavel = false;
 
     } else if(editavel === false) {
