@@ -15,7 +15,6 @@ function editaProduto(evento) {
             column = column.previousSibling;
         }
 
-        column.focus();
         editavel = false;
 
     } else if(editavel === false) {
