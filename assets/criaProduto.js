@@ -14,11 +14,23 @@ function criaProduto() {
     const tableR = document.createElement('tr');
     corpoTabela.appendChild(tableR);
 
-    for(var i = 0; i <= 3; i++){
+    for(var i = 0; i <= 3; i++) {
         if(i < 3){
             const tableD = document.createElement('td');
             tableR.appendChild(tableD);
-            tableD.innerHTML = arrayProduto[i];
+
+            if(i == 0) {
+                tableD.innerHTML = arrayProduto[i];
+            } else if(i == 1) {
+                tableD.innerHTML = `R$${arrayProduto[i]}`;
+            } else if(i == 2) {
+                if(arrayProduto[i] == 1){
+                    tableD.innerHTML = `${arrayProduto[i]} kg`;
+                } else {
+                    tableD.innerHTML = `${arrayProduto[i]} kgs`;
+                }
+            }
+            
             tableD.classList.add("itemLista");
         } else if(i === 3) {
             const tableD = document.createElement('td');
