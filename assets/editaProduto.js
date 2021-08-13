@@ -12,17 +12,22 @@ function editaProduto(evento) {
     if(editavel) {
         for(var i = 1; i < quantidadeColunas; i++) {
             column.contentEditable = "true";
+            column.style.backgroundColor = "#ff726f";
+            evento.style.backgroundColor = "blue";
             column = column.previousSibling;
         }
         
+        evento.style.backgroundColor = "blue";
         editavel = false;
 
     } else if(editavel === false) {
         for(var i = 1; i < quantidadeColunas; i++) {
             column.contentEditable = "false";
+            column.style.backgroundColor = "white";
             column = column.previousSibling;
         }
 
+        evento.style.backgroundColor = "green";
         editavel = true;
 
     }

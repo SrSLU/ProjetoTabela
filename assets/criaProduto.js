@@ -2,37 +2,30 @@
 
 function criaProduto() {
     const corpoTabela = document.querySelector(".corpoItensLista");
-    const nomeProduto = document.querySelector(".nomeProduto");
-    const valorProduto = document.querySelector(".valorProduto");
-    const quantidadeProduto = document.querySelector(".quantidadeProduto");
-
-    let nome = nomeProduto.value;
-    let valor = valorProduto.value;
-    let quantidade = quantidadeProduto.value;
-    const arrayProduto = [nomeProduto, valorProduto, quantidadeProduto];
-
-    const tableR = document.createElement('tr');
-    const conteudoNome = `<p>${nome}</p>`;
-    const conteudoValor = `<p>R$${valor}</p>`;
-    let conteudoQuantidade;
-
-    if(quantidade == 1) {
-        conteudoQuantidade = `<p>${quantidade} kg</p>`;
-    } else if(quantidade < 1 || quantidade > 1) {
-        conteudoQuantidade = `<p>${quantidade} kgs</p>`;
+    let produto = {
+        nome: document.querySelector(".nomeProduto").value,
+        valor: document.querySelector(".valorProduto").value,
+        quantidade: document.querySelector(".quantidadeProduto").value
     }
 
-    const conteudoTR = `<td class="itemLista">${conteudoNome}</td>` + 
-    `<td class="itemLista">${conteudoValor}</td>` + 
-    `<td class="itemLista">${conteudoQuantidade}</td>` + 
-    `<td class="itemLista"><input type="button" value="&#128465;" class="removeItem" onclick="removeProduto(this)"><input type="button" value="&#9998;" class="botaoEditar" onclick="editaProduto(this)"></td>`;
+    const arrayProduto = [produto.nome, produto.valor, produto.quantidade];
+    const valueProduto = { removedor: "&#128465;", editor: "&#9998;" }
 
-    tableR.innerHTML = conteudoTR;
+    const tableR = document.createElement('tr');
     corpoTabela.appendChild(tableR);
-    tableR.classList.add("itemRow");
-    
-    for(var i = 0; i < arrayProduto.length; i++) {
-        arrayProduto[i].value = "";
+
+    for(var i = 0; i <= 3; i++){
+        if(i < 3){
+            const tableD = document.createElement('td');
+            tableR.appendChild(tableD);
+            tableD.innerHTML = arrayProduto[i];
+            tableD.classList.add("itemLista");
+        } else if(i === 3) {
+            const tableD = document.createElement('td');
+            tableR.appendChild(tableD);
+            tableD.innerHTML = `<input type="button" class="removeItem" value=${valueProduto.removedor} onclick="removeProduto(this)"><input type="button" class="botaoEditar" value=${valueProduto.editor} onclick="editaProduto(this)">`;
+            tableD.classList.add("itemLista");
+        }
     }
 }
 

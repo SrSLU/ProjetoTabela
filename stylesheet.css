@@ -74,8 +74,7 @@ table {
 }
 
 table th {
-    max-width: 25%;
-    min-width: 25%;
+    width: 200px;
     padding: 0.3em;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5em;
@@ -84,18 +83,15 @@ table th {
 }
 
 table th:last-of-type {
-    max-width: 25%;
-    min-width: 25%;
+    width: 100px;
 }
 
 tbody td:last-of-type {
-    max-width: 25%;
-    min-width: 25%;
+    width: 100px;
 }
 
 .itemLista {
-    max-width: 25%;
-    min-width: 25%;
+    width: 200px;
     font-size: 1.3em;
     padding: 6px 0 6px 2em;
     font-family: 'Oswald', sans-serif;
