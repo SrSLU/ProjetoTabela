@@ -13,12 +13,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-
-        <!--Referência dos scripts (preciso melhorar o trabalho com módulos)-->
-
-        <script type="module" src="main.mjs"></script>
-        <script src="assets/removeProduto.js"></script>
-        <script src="assets/editaProduto.js"></script>
     </head>
 
 <!--//////////////////////////////////////////////////////////////////////-->
@@ -49,7 +43,7 @@
                 <label for="quantidade">Quantidade do produto:</label>
                 <input class="quantidadeProduto" id="quantidade" type="number">
 
-                <input type="button" value="Adicionar item" class="botaoAdicionar">
+                <input type="button" value="Adicionar item" class="botaoAdicionar" onclick="criaProduto()">
             </div>
 
             <!--Tabela-->
@@ -68,6 +62,10 @@
                 </tbody>
             </table>
         </main>
+
+        <script src="assets/criaProduto.js"></script>
+        <script src="assets/removeProduto.js"></script>
+        <script src="assets/editaProduto.js"></script>
         
     </body>
 </html>

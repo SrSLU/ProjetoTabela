@@ -9,7 +9,7 @@ function criaProduto() {
     }
 
     const arrayProduto = [produto.nome, produto.valor, produto.quantidade];
-    const valueProduto = { removedor: "&#128465;", editor: "&#9998;" }
+    const valueProduto = { removedor: "&#128465;", editor: "&#9998;" };
 
     const tableR = document.createElement('tr');
     corpoTabela.appendChild(tableR);
@@ -39,6 +39,7 @@ function criaProduto() {
             tableD.classList.add("itemLista");
         }
     }
+    document.querySelector(".nomeProduto").value = "";
+    document.querySelector(".valorProduto").value = "";
+    document.querySelector(".quantidadeProduto").value = "";
 }
-
-export {criaProduto};
